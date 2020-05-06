@@ -16,13 +16,26 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font: 16px Roboto, sans-serif;
+    font: 1.2rem Roboto, sans-serif;
+  }
+
+  @media (max-width: 1080px) {
+    html {
+      font-size: 100%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    html {
+      font-size: 90%;
+    }
   }
 
   #root {
     max-width: 960px;
     margin: 0 auto;
     padding: 40px 20px;
+    font-size: 10px;
   }
 
   button {

@@ -5,6 +5,17 @@ interface FormProps {
   hasError: boolean;
 }
 
+export const LogoImg = styled.div`
+  display: flex;
+  flex: 1;
+
+  img {
+    @media (max-width: 720px) {
+      margin: auto;
+    }
+  }
+`;
+
 export const Title = styled.h1`
   font-size: 48px;
   color: #3a3a3a;
@@ -12,13 +23,43 @@ export const Title = styled.h1`
   line-height: 56px;
 
   margin-top: 80px;
+
+  @media (max-width: 720px) {
+    font-size: 3rem;
+    margin-top: 40px;
+  }
 `;
 
 export const Form = styled.form<FormProps>`
+  input.large {
+    display: flex;
+  }
+
+  input.small {
+    display: none;
+  }
+
   margin-top: 40px;
   max-width: 700px;
 
   display: flex;
+
+  @media (max-width: 720px) {
+    height: 130px;
+    flex-direction: column;
+
+    input.small {
+      display: flex;
+      border-radius: 5px;
+      margin-bottom: 10px;
+
+      text-align: center;
+    }
+
+    input.large {
+      display: none;
+    }
+  }
 
   input {
     flex: 1;
@@ -50,6 +91,12 @@ export const Form = styled.form<FormProps>`
     font-weight: bold;
     transition: background-color 0.2s;
 
+    @media (max-width: 720px) {
+      height: 60px;
+      width: 100%;
+      border-radius: 5px;
+    }
+
     &:hover {
       background: ${shade(0.2, '#04d361')};
     }
@@ -60,6 +107,7 @@ export const Error = styled.span`
   display: block;
   color: #c53030;
   margin-top: 8px;
+  font-size: 0.9rem;
 `;
 
 export const Repositories = styled.div`
@@ -105,6 +153,15 @@ export const Repositories = styled.div`
         font-size: 18px;
         color: #a8a8b3;
         margin-top: 4px;
+      }
+
+      @media (max-width: 720px) {
+        p {
+          max-height: 60px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          direction: ltr;
+        }
       }
     }
 

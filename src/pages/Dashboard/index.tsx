@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 import logoImg from '../../assets/logo.svg';
 
-import { Title, Form, Repositories, Error } from './styles';
+import { LogoImg, Title, Form, Repositories, Error } from './styles';
 
 interface Repository {
   full_name: string;
@@ -63,14 +63,24 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <img src={logoImg} alt="Github Explorer" />
+      <LogoImg>
+        <img src={logoImg} alt="Github Explorer" />
+      </LogoImg>
+
       <Title>Explore repositórios no Github</Title>
 
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
+          className="large"
           value={newRepo}
           onChange={(e) => setNewRepo(e.target.value)}
           placeholder="Digite aqui o nome do repositório"
+        />
+        <input
+          className="small"
+          value={newRepo}
+          onChange={(e) => setNewRepo(e.target.value)}
+          placeholder="Repositório"
         />
         <button type="submit">Pesquisar</button>
       </Form>
@@ -90,7 +100,11 @@ const Dashboard: React.FC = () => {
 
             <div>
               <strong>{repository.full_name}</strong>
-              <p>{repository.description}</p>
+              <p>
+                {repository.description.length >= 70
+                  ? `${repository.description.substring(0, 70)}...`
+                  : repository.description}
+              </p>
             </div>
 
             <FiChevronRight size={20} />
