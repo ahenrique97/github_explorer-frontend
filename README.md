@@ -6,15 +6,15 @@ Dashboard da versão web:
 
 </br>
 
-Dashboard da versão responsiva:
-![Dashboard responsiva](https://i.imgur.com/3G8hZeb.png)
-
-</br>
-
-Repositório em detalhe versão web:
+Repositório em detalhe versão web:</br>
 ![Repositório full](https://i.imgur.com/KNmmNpT.png)
 
 </br>
 
-Repositório em detalhe responsivo:
-![Repositório responsivo](https://i.imgur.com/327LkO6.png)
+Dashboard da versão responsiva:</br>
+![Dashboard responsiva](https://i.imgur.com/3G8hZeb.png)
+
+</br>
+
+Repositório em detalhe responsivo:</br>
+![Repositório responsivo](https://i.imgur.com/TGnocOr.png)
